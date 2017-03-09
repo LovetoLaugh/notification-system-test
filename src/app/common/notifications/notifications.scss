@@ -1,0 +1,166 @@
+@import '../common';
+
+.notifications-overlay {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+
+  &.ng-enter {
+    animation: fadeIn 0.3s ease-out;
+  }
+  &.ng-leave {
+    animation: fadeOut 0.3s ease-in;
+  }
+}
+
+.notifications {
+  position: absolute;
+  z-index: 1000;
+  top: 52px;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  overflow-y: scroll;
+  background-color: #ffffff;
+  border-top: 10px #cccccc solid;
+  display: flex;
+
+  &.ng-enter {
+    animation: fadeInRightBig 0.3s ease-out;
+  }
+  &.ng-leave {
+    animation: fadeOutLeftBig 0.3s ease-in;
+  }
+
+  & > .container {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .loading {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.notifications-date {
+  padding: 10px 26px;
+  border-bottom: 1px #d5d5d5 solid;
+  h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #333333;
+  }
+}
+
+.notification-stats {
+  padding: 45px 26px 0;
+  h2, h6 {
+    text-align: center;
+  }
+  h2 {
+    font-size: 72px;
+    font-weight: 100;
+    color: #47acf5;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 23px;
+    color: #999;
+  }
+}
+
+.notifications-workspace {
+  height: 32px;
+  background-color: #f7f7f7;
+  border-top: 1px #d6d6d6 solid;
+  a{
+    line-height: 32px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    color: #4C9DD6;
+  }
+}
+
+.notifications-list {
+  .card {
+    position: relative;
+    border-bottom: 1px #cccccc solid;
+    &:last-child {
+      border-bottom: none;
+    }
+    .close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      a {
+        color: #a6a6a6;
+      }
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 23px;
+      color: #333333;
+    }
+    .card-body {
+      a {
+        color: #47acf5;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(800px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOutLeftBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(800px, 0, 0);
+  }
+}

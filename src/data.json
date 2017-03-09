@@ -1,0 +1,37 @@
+{
+  "assignedCount": 56,
+  "reminderCount": 4,
+  "notificationCount": 20,
+  "results": [
+    {
+      "timestamp": 1489044932888,
+      "message": "Oliver Oliver has assigned the Interview - Book Travel task to you",
+      "type": "assigned"
+    },
+    {
+      "timestamp": 1488872318000,
+      "message": "Oliver Oliver has assigned the Interview - Book Travel task to you",
+      "type": "assigned"
+    },
+    {
+      "timestamp": 1488872313021,
+      "message": "Oliver Oliver has assigned the Interview - Book Travel task to you",
+      "type": "reminder"
+    },
+    {
+      "timestamp": 1489046110212,
+      "message": "Oliver Oliver has assigned the Interview - Book Travel task to you",
+      "type": "reminder"
+    },
+    {
+      "timestamp": 1488930158000,
+      "message": "Oliver Oliver has assigned the Interview - Book Travel task to you",
+      "type": "notification"
+    },
+    {
+      "timestamp": 1489013078000,
+      "message": "Oliver Oliver has assigned the Interview - Book Travel task to you",
+      "type": "notification"
+    }
+  ]
+}

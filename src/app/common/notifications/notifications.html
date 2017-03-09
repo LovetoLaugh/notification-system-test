@@ -1,0 +1,55 @@
+<section class="notifications-overlay" ng-if="$ctrl.showNotification"></section>
+<section class="notifications" ng-if="$ctrl.showNotification" hide-notifications>
+  <div class="container">
+    <div class="notifications-date">
+      <h3>{{ $ctrl.date }}</h3>
+    </div>
+    <div class="notifications-content" ng-if="!$ctrl.loading">
+      <div class="notification-stats">
+        <div class="columns col-gapless">
+          <div class="column col-4">
+            <div class="notification-stats__assigned">
+              <h2>{{ $ctrl.notifications.assignedCount | digits }}</h2>
+              <h6>Assigned Tasks</h6>
+            </div>
+          </div>
+          <div class="column col-4">
+            <div class="notification-stats__reminders">
+              <h2>{{ $ctrl.notifications.reminderCount | digits }}</h2>
+              <h6>Reminders</h6>
+            </div>
+          </div>
+          <div class="column col-4">
+            <div class="notification-stats__notifications">
+              <h2>{{ $ctrl.notifications.notificationCount | digits }}</h2>
+              <h6>Notifications</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notifications-workspace">
+        <a href="#">Go to My Workspace <i class="icon ion-ios-arrow-forward"></i></a>
+      </div>
+      <div class="notifications-list">
+        <div class="card" ng-repeat="item in $ctrl.notifications.results">
+          <div class="close">
+            <a href="#">
+              <i class="ion-close-round"></i>
+            </a>
+          </div>
+          <div class="card-header">
+            <div class="card-title">{{ item.timestamp | dateinwords }}</div>
+          </div>
+          <div class="card-body">
+            {{ item.message }}
+            <a ng-if="item.type === 'assigned'" href="#">View Task <span class="ion-ios-arrow-forward"></span></a>
+            <a ng-if="item.type === 'reminder'" href="#">View Pipeline <span class="ion-ios-arrow-forward"></span></a>
+            <a ng-if="item.type === 'notification'" href="#">View Questionnaire <span class="ion-ios-arrow-forward"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading" ng-if="$ctrl.loading"></div>
+  </div>
+</section>

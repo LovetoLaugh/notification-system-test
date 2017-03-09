@@ -1,0 +1,20 @@
+@import '../common';
+
+.navbar {
+  padding: 0 1rem;
+  background-color: $darkBgColor;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  .navbar-section {
+    i {
+      font-size: 16px;
+    }
+    .navbar-brand,
+    .btn.btn-link {
+      color: $lightTextColor;
+    }
+  }
+}

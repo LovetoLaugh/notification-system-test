@@ -1,0 +1,14 @@
+@import '../common';
+
+.hero {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: $lightTextColor;
+  height: auto;
+  color: $darkBgColor;
+
+  h1, h3 {
+    margin: 0;
+    padding: 0;
+  }
+}

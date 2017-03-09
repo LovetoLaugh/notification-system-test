@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <section class="navbar-section">
+    <a ui-sref="home" class="navbar-brand">
+      <i class="icon icon-pages"></i> {{ $ctrl.name }}
+    </a>
+    <a ui-sref="about" class="btn btn-link">About</a>
+  </section>
+  <section class="navbar-section">
+    <button class="btn btn-action btn-notifications circle badge" data-badge="" ng-click="$ctrl.toggle()">
+      <i class="icon ion-ios-bell"></i>
+    </button>
+
+    <div class="dropdown">
+      <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
+        Johnny Appleseed <i class="icon-caret"></i>
+      </a>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#">Profile</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Settings</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</nav>
